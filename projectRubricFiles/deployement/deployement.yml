@@ -30,22 +30,9 @@ spec:
             port: 5153
           initialDelaySeconds: 5
           timeoutSeconds: 5
-        resources:
-          limits:
-            cpu: "700m"
-            memory: "256Mi"
-          requests:
-            cpu: "500m"
-            memory: "128Mi"
         env:
-          - name: DB_USERNAME
-            valueFrom:
-              configMapKeyRef:
-                name: db-env
-                key: DB_USERNAME
-          - name: DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: db-secret
-                key: DB_PASSWORD
+        - name: DB_USERNAME
+          value: postgres
+        - name: DB_PASSWORD
+          value: postgres
       restartPolicy: Always
