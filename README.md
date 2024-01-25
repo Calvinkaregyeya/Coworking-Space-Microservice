@@ -61,7 +61,7 @@ To do this;
 
 Note: Each time a build runs, an image will be created in ECR and tagged with the Codebuild number.
 
-#### 3. Deploying new changes
+#### 4. Deploying new changes
 
 Inside the analytics directory where your application lies. Run the command
 
